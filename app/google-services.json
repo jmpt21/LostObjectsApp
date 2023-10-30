@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "506654347126",
+    "project_id": "lost-objects-app",
+    "storage_bucket": "lost-objects-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506654347126:android:b4b11b02463da609983457",
+        "android_client_info": {
+          "package_name": "mx.tecnm.cdhidalgo.lostobjectsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "506654347126-ml7t335599l3shppf4fqjbv6df9nndt6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.tecnm.cdhidalgo.lostobjectsapp",
+            "certificate_hash": "5039e870cfd9bcbd82f87609e4194dd323b1d9f0"
+          }
+        },
+        {
+          "client_id": "506654347126-pg4jbhh9ahs0vv5ondrk0umeet9pnhmp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMA8-Rs2N_LAB6_JgIZ2ouxy0CyDnZw9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "506654347126-pg4jbhh9ahs0vv5ondrk0umeet9pnhmp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
