@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import mx.tecnm.cdhidalgo.lostobjectsapp.R
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.FragmentPresentationBinding
 
 class PresentationFragment : Fragment() {
@@ -37,11 +39,11 @@ class PresentationFragment : Fragment() {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }*/
         binding.btnSignInPresentation.setOnClickListener {
-
+            findNavController().navigate(R.id.action_PresentationFragment_to_LoginFragment)
         }
 
         binding.btnSignUpPresentation.setOnClickListener {
-
+            findNavController().navigate(R.id.action_PresentationFragment_to_RegisterFragment)
         }
     }
 
