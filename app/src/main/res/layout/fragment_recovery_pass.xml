@@ -3,12 +3,105 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
              tools:context=".fragments.RecoveryPassFragment">
     
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:padding="10dp"
+    >
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+            <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_back_recovery_pass"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/back"
+                    android:backgroundTint="@android:color/transparent"
+                    android:contentDescription="@string/description_back"
+            />
+            
+            <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_recovery_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_back_recovery_pass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/txt_title_recovery_pass"
+                    android:fontFamily="@font/dubai_medium"
+                    android:textSize="24sp"
+            />
+            
+            <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/picture_recovery_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-50dp"
+                    app:layout_constraintTop_toBottomOf="@+id/title_recovery_pass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/picture_forgot_pass"
+            />
+            
+            <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-60dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/picture_recovery_pass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/txt_message_recovery_pass"
+                    android:fontFamily="@font/tahoma2"
+            />
+            
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_email_recovery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/txt_input_email"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_message"
+            >
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_button_login"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:strokeWidth="4dp"
+                    app:cornerRadius="20dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/input_email_recovery"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/txt_button_send_reset_email"
+                    android:fontFamily="@font/dubai_medium"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+            />
+        
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

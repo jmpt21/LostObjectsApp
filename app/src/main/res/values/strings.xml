@@ -35,6 +35,8 @@
     
     
     <!-- Texts for reset password -->
-    
+    <string name="txt_title_recovery_pass">Recuperación de contraseña</string>
+    <string name="txt_message_recovery_pass">Enviaremos un enlace a tu correo electrónico para restablecer la contraseña.</string>
+    <string name="txt_button_send_reset_email">Enviar correo</string>
 
 </resources>
