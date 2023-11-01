@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_LoginFragment_to_RegisterFragment"
             app:destination="@id/RegisterFragment"/>
+        <action
+            android:id="@+id/action_LoginFragment_to_PresentationFragment"
+            app:destination="@id/PresentationFragment"/>
     </fragment>
     
     <fragment
@@ -39,7 +42,9 @@
             android:label="@string/recovery_pass_fragment_label"
             tools:layout="@layout/fragment_recovery_pass"
     >
-    
+        <action
+            android:id="@+id/action_RecoveryPassFragment_to_LoginFragment"
+            app:destination="@+id/LoginFragment"/>
     </fragment>
     
     <fragment
@@ -48,6 +53,8 @@
             android:label="@string/register_fragment_label"
             tools:layout="@layout/fragment_register"
     >
-    
+        <action
+            android:id="@+id/action_RegisterFragment_to_LoginFragment"
+            app:destination="@+id/LoginFragment"/>
     </fragment>
 </navigation>

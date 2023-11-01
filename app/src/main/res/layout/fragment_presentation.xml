@@ -107,6 +107,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:text="@string/txt_button_sign_in"
+                    android:fontFamily="@font/dubai_medium"
+                    android:textStyle="bold"
             />
             
             <com.google.android.material.button.MaterialButton
@@ -120,6 +122,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:text="@string/txt_button_sign_up"
+                    android:fontFamily="@font/dubai_medium"
+                    android:textStyle="bold"
             />
         </androidx.constraintlayout.widget.ConstraintLayout>
         

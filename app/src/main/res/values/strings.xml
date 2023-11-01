@@ -4,6 +4,12 @@
     
     <string name="hello_blank_fragment">Hello blank fragment</string>
     
+    <!-- General labels -->
+    <string name="description_login">Pantalla de inicio de sesión</string>
+    <string name="description_back">Botón regresar</string>
+    <string name="txt_input_email">Correo electrónico</string>
+    <string name="txt_input_password">Contraseña</string>
+    
     <!-- Labels for fragments -->
     <string name="presentation_fragment_label">Presentation fragment</string>
     <string name="login_fragment_label">Login fragment</string>
@@ -16,5 +22,19 @@
     <string name="title_tec_2">DE CIUDAD HIDALGO</string>
     <string name="txt_button_sign_in">Iniciar sesión</string>
     <string name="txt_button_sign_up">Registrarse</string>
+    
+    <!-- Texts for login -->
+    <string name="txt_title_login">Inicio de sesión</string>
+    <string name="txt_button_login">Ingresar</string>
+    <string name="txt_options_login">O inicia sesión usando:</string>
+    <string name="txt_button_forgot_password">Olvidé mi contraseña</string>
+    <string name="txt_button_wish_register">Quiero registrarme</string>
+    <string name="description_button_google">Iniciar con google</string>
+    
+    <!-- Texts for register -->
+    
+    
+    <!-- Texts for reset password -->
+    
 
 </resources>
