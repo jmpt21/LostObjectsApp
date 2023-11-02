@@ -85,7 +85,7 @@
             </com.google.android.material.textfield.TextInputLayout>
             
             <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_button_login"
+                    android:id="@+id/btn_recovery_pass"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     app:strokeWidth="4dp"
                     app:cornerRadius="20dp"

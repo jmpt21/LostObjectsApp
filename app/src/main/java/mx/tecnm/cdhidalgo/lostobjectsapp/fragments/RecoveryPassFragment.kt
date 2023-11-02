@@ -26,7 +26,7 @@ class RecoveryPassFragment : Fragment() {
         binding.btnBackRecoveryPass.setOnClickListener {
             findNavController().navigate(R.id.action_RecoveryPassFragment_to_LoginFragment)
         }
-        binding.btnButtonLogin.setOnClickListener {
+        binding.btnRecoveryPass.setOnClickListener {
 
         }
     }
