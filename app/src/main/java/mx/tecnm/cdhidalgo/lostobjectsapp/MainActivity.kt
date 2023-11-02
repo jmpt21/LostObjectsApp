@@ -2,12 +2,7 @@ package mx.tecnm.cdhidalgo.lostobjectsapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.widget.AppCompatImageButton
-import com.google.android.material.snackbar.BaseTransientBottomBar
-import com.google.android.material.snackbar.Snackbar
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
