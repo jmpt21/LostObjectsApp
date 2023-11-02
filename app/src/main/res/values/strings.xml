@@ -10,6 +10,12 @@
     <string name="txt_input_email">Correo electrónico</string>
     <string name="txt_input_password">Contraseña</string>
     
+    <!-- Forms -->
+    <string name="txt_input_name">Nombre</string>
+    <string name="txt_input_lastname_1">Primer apellido</string>
+    <string name="txt_input_lastname_2">Segundo apellido (opcional)</string>
+    <string name="txt_input_number_phone">Teléfono</string>
+    
     <!-- Labels for fragments -->
     <string name="presentation_fragment_label">Presentation fragment</string>
     <string name="login_fragment_label">Login fragment</string>
@@ -32,7 +38,13 @@
     <string name="description_button_google">Iniciar con google</string>
     
     <!-- Texts for register -->
-    
+    <string name="txt_title_register">Registro de usuario</string>
+    <string name="txt_general_data">Datos generales</string>
+    <string name="txt_school_data">Datos escolares</string>
+    <string name="txt_credentials_data">Credenciales de acceso</string>
+    <string name="txt_message_1">*Si no eres estudiante, puedes omitir los siguientes tres campos.</string>
+    <string name="txt_message_2">*Si aún no tienes asignado un número de control, usa tu CURP o deja vacío el campo.</string>
+    <string name="txt_button_register">Registrarse</string>
     
     <!-- Texts for reset password -->
     <string name="txt_title_recovery_pass">Recuperación de contraseña</string>
