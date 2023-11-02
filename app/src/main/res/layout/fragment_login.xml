@@ -84,6 +84,7 @@
                     app:boxCornerRadiusBottomStart="10dp"
                     android:hint="@string/txt_input_password"
                     app:layout_constraintTop_toBottomOf="@+id/input_email"
+                    app:passwordToggleEnabled="true"
             >
                 <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
