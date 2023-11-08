@@ -72,7 +72,7 @@ class RegisterFragment : Fragment() {
                         displayName = "$nameInput $lastName1 $lastName2".trim()
                     }
                     it.user?.updateProfile(profileUpdates)
-                    firestore.collection("users").add(userData)
+                    firestore.collection("users").document(email).set(userData)
                         .addOnSuccessListener {
                             goToHome()
                             Toast.makeText(context, "Registro exitoso. Bienvenido :D", Toast.LENGTH_SHORT).show()
