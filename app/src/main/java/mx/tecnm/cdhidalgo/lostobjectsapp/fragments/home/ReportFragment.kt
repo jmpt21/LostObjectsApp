@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import mx.tecnm.cdhidalgo.lostobjectsapp.HomeActivity
 import mx.tecnm.cdhidalgo.lostobjectsapp.R
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.FragmentHomeBinding
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.FragmentReportBinding
@@ -24,6 +25,16 @@ class ReportFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as HomeActivity).hideFab()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as HomeActivity).showFab()
     }
 
     override fun onDestroy() {

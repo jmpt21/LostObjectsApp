@@ -62,6 +62,24 @@
     <string name="action_sign_out">Cerrar sesión</string>
     <string name="action_profile">Mi perfil</string>
     <string name="action_my_reports">Mis reportes</string>
+    <string name="create_report">Crear reporte</string>
+
+    <!-- Texts for report -->
+    <string name="user_photo">Foto de usuario</string>
+    <string name="txt_title_date_report">Fecha:</string>
+    <string name="txt_title_report_type">Tipo de reporte:</string>
+    <string name="txt_radio_1">Encontré un objeto</string>
+    <string name="txt_radio_2">Perdí un objeto</string>
+    <string name="txt_title_object_report">Objeto:</string>
+    <string name="txt_input_object_report">Título descriptivo</string>
+    <string name="txt_title_description_report">Descripción:</string>
+    <string name="txt_title_location_report">Ubicación:</string>
+    <string name="txt_title_date_object_report">Fecha:</string>
+    <string name="txt_input_description_report">Describe el objeto que encontraste o perdiste</string>
+    <string name="txt_location_input_report">Lugar donde perdiste o encontraste el objeto</string>
+    <string name="txt_title_image_report">Imagen: (opcional)</string>
+    <string name="txt_image_report">*Se recomienda añadir una imagen para que las demás personas puedan identificar el objeto más fácilmente.</string>
+    <string name="txt_description_button_image">Añadir imagen</string>
 
 
 </resources>

@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.ActivityHomeBinding
@@ -16,6 +17,7 @@ import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.ActivityHomeBinding
 class HomeActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityHomeBinding
+    lateinit var fab: FloatingActionButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
@@ -25,6 +27,11 @@ class HomeActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_home)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        fab = binding.btnGoToReport
+        fab.setOnClickListener {
+            navController.navigate(R.id.action_HomeFragment_to_ReportFragment)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -32,7 +39,17 @@ class HomeActivity : AppCompatActivity() {
         return true
     }
 
-override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    fun hideFab() {
+        fab.isEnabled = false
+        fab.hide()
+    }
+
+    fun showFab() {
+        fab.isEnabled = true
+        fab.show()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_profile -> true
             R.id.action_my_reports -> true

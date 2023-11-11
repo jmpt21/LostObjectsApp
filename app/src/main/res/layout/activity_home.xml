@@ -21,4 +21,15 @@
 
     <include layout="@layout/content_home_module" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_GoToReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeFAB"
+        app:tint="@color/white"
+        android:src="@drawable/add_report"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        android:contentDescription="@string/create_report" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
