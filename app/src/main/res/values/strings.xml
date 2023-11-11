@@ -1,34 +1,34 @@
 <resources>
     <string name="app_name">Lost Objects\nApp</string>
     <string name="web_client_id">506654347126-pg4jbhh9ahs0vv5ondrk0umeet9pnhmp.apps.googleusercontent.com</string>
-    
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+
     <!-- General labels -->
     <string name="description_login">Pantalla de inicio de sesión</string>
     <string name="description_back">Botón regresar</string>
     <string name="txt_input_email">Correo electrónico</string>
     <string name="txt_input_password">Contraseña</string>
-    
+
     <!-- Forms -->
     <string name="txt_input_name">Nombre</string>
     <string name="txt_input_lastname_1">Primer apellido</string>
     <string name="txt_input_lastname_2">Segundo apellido (opcional)</string>
     <string name="txt_input_number_phone">Teléfono</string>
-    
+
     <!-- Labels for fragments -->
     <string name="presentation_fragment_label">Presentation fragment</string>
     <string name="login_fragment_label">Login fragment</string>
     <string name="register_fragment_label">Register fragment</string>
     <string name="recovery_pass_fragment_label">Recovery pass fragment</string>
     <string name="logo_tecnm_content_description">Logo Tecnm</string>
-    
+
     <!-- Texts for presentation -->
     <string name="title_tec_1">INSTITUTO TECNOLÓGICO SUPERIOR</string>
     <string name="title_tec_2">DE CIUDAD HIDALGO</string>
     <string name="txt_button_sign_in">Iniciar sesión</string>
     <string name="txt_button_sign_up">Registrarse</string>
-    
+
     <!-- Texts for login -->
     <string name="txt_title_login">Inicio de sesión</string>
     <string name="txt_button_login">Ingresar</string>
@@ -36,7 +36,7 @@
     <string name="txt_button_forgot_password">Olvidé mi contraseña</string>
     <string name="txt_button_wish_register">Quiero registrarme</string>
     <string name="description_button_google">Iniciar con google</string>
-    
+
     <!-- Texts for register -->
     <string name="txt_title_register">Registro de usuario</string>
     <string name="txt_general_data">Datos generales</string>
@@ -46,23 +46,22 @@
     <string name="txt_message_2">*Si aún no tienes asignado un número de control, usa tu CURP o deja vacío el campo.
     </string>
     <string name="txt_button_register">Registrarse</string>
-    
+
     <!-- Texts for reset password -->
     <string name="txt_title_recovery_pass">Recuperación de contraseña</string>
     <string name="txt_message_recovery_pass">Enviaremos un enlace a tu correo electrónico para restablecer la
         contraseña.
     </string>
     <string name="txt_button_send_reset_email">Enviar correo</string>
-    <string name="title_activity_home">HomeActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-    
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- Texts for home -->
+    <string name="home_fragment_label">Inicio</string>
+    <string name="lost_objects_fragment_label">Objetos perdidos</string>
+    <string name="found_objects_fragment_label">Objetos encontrados</string>
+    <string name="report_fragment_label">Levantar reporte</string>
+    <string name="action_sign_out">Cerrar sesión</string>
+    <string name="action_profile">Mi perfil</string>
+    <string name="action_my_reports">Mis reportes</string>
+
 
 </resources>

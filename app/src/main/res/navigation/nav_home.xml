@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/HomeFragment"
+    android:id="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="mx.tecnm.cdhidalgo.lostobjectsapp.fragments.home.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_HomeFragment_to_LostObjectsFragment"
+            app:destination="@+id/LostObjectsFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_FoundObjectsFragment"
+            app:destination="@+id/FoundObjectsFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_ReportFragment"
+            app:destination="@+id/ReportFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LostObjectsFragment"
+        android:name="mx.tecnm.cdhidalgo.lostobjectsapp.fragments.home.LostObjectsFragment"
+        android:label="@string/lost_objects_fragment_label"
+        tools:layout="@layout/fragment_lost_objects" >
+        <action
+            android:id="@+id/action_LostObjectsFragment_to_HomeFragment"
+            app:destination="@+id/HomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FoundObjectsFragment"
+        android:name="mx.tecnm.cdhidalgo.lostobjectsapp.fragments.home.FoundObjectsFragment"
+        android:label="@string/found_objects_fragment_label"
+        tools:layout="@layout/fragment_found_objects" >
+        <action
+            android:id="@+id/action_FoundObjectsFragment_to_HomeFragment"
+            app:destination="@+id/HomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ReportFragment"
+        android:name="mx.tecnm.cdhidalgo.lostobjectsapp.fragments.home.ReportFragment"
+        android:label="@string/report_fragment_label"
+        tools:layout="@layout/fragment_report" >
+        <action
+            android:id="@+id/action_ReportFragment_to_HomeFragment"
+            app:destination="@+id/HomeFragment" />
+
+    </fragment>
+
+
+</navigation>

@@ -4,6 +4,15 @@
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/light_primary</item>
     </style>
+
+    <style name="ThemeAppBar" parent="Base.Theme.LostObjectsApp">
+        <item name="colorPrimary">@color/light_primary</item>
+        <item name="android:backgroundTint">@color/light_primary</item>
+        <item name="android:text">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
     
     <style name="Theme.LostObjectsApp" parent="Base.Theme.LostObjectsApp"/>
     <style name="Theme.LostObjectsApp.NoActionBar">
