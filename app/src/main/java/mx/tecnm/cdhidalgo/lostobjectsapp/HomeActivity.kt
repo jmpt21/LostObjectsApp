@@ -11,15 +11,25 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.ActivityHomeBinding
+import mx.tecnm.cdhidalgo.lostobjectsapp.entities.UserDataClass
 
+var userProfile: UserDataClass? = null
 class HomeActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityHomeBinding
-    lateinit var fab: FloatingActionButton
+    private lateinit var fab: FloatingActionButton
+    private lateinit var firestore: FirebaseFirestore
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        firestore = Firebase.firestore
+        firestore.collection("users").document(Firebase.auth.currentUser?.email.toString())
+            .get().addOnSuccessListener {
+                userProfile = it.toObject(UserDataClass::class.java)
+            }
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbarHome)

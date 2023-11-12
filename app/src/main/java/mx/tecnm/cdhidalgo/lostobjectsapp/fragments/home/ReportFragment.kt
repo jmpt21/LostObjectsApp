@@ -25,6 +25,7 @@ import mx.tecnm.cdhidalgo.lostobjectsapp.HomeActivity
 import mx.tecnm.cdhidalgo.lostobjectsapp.R
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.FragmentReportBinding
 import mx.tecnm.cdhidalgo.lostobjectsapp.entities.ObjectDataClass
+import mx.tecnm.cdhidalgo.lostobjectsapp.userProfile
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -68,9 +69,9 @@ class ReportFragment : Fragment() {
                 showAlert("Selecciona un tipo de reporte", view)
                 return@setOnClickListener
             }
-            val title = binding.txtObjectReport.text.toString()
-            val description = binding.textDescriptionReport.text.toString()
-            val location = binding.txtLocationReport.text.toString()
+            val title = binding.txtObjectReport.text.trim().toString()
+            val description = binding.textDescriptionReport.text.trim().toString()
+            val location = binding.txtLocationReport.text.trim().toString()
 
             if (title.isBlank() || description.isBlank() || location.isBlank()) {
                 showAlert("Llena todos los campos necesarios", view)
@@ -138,6 +139,8 @@ class ReportFragment : Fragment() {
                             val data = ObjectDataClass(
                                 null,
                                 Firebase.auth.currentUser?.email,
+                                Firebase.auth.currentUser?.displayName,
+                                userProfile?.phoneNumber  ?: Firebase.auth.currentUser?.phoneNumber,
                                 binding.txtObjectReport.text.toString(),
                                 binding.textDescriptionReport.text.toString(),
                                 binding.txtLocationReport.text.toString(),
@@ -154,6 +157,8 @@ class ReportFragment : Fragment() {
                     val data = ObjectDataClass(
                         null,
                         Firebase.auth.currentUser?.email,
+                        Firebase.auth.currentUser?.displayName,
+                        userProfile?.phoneNumber ?: Firebase.auth.currentUser?.phoneNumber,
                         binding.txtObjectReport.text.toString(),
                         binding.textDescriptionReport.text.toString(),
                         binding.txtLocationReport.text.toString(),
@@ -173,6 +178,8 @@ class ReportFragment : Fragment() {
                             val data = ObjectDataClass(
                                 null,
                                 Firebase.auth.currentUser?.email,
+                                Firebase.auth.currentUser?.displayName,
+                                userProfile?.phoneNumber ?: Firebase.auth.currentUser?.phoneNumber,
                                 binding.txtObjectReport.text.toString(),
                                 binding.textDescriptionReport.text.toString(),
                                 binding.txtLocationReport.text.toString(),
@@ -189,6 +196,8 @@ class ReportFragment : Fragment() {
                     val data = ObjectDataClass(
                         null,
                         Firebase.auth.currentUser?.email,
+                        Firebase.auth.currentUser?.displayName,
+                        userProfile?.phoneNumber ?: Firebase.auth.currentUser?.phoneNumber,
                         binding.txtObjectReport.text.toString(),
                         binding.textDescriptionReport.text.toString(),
                         binding.txtLocationReport.text.toString(),

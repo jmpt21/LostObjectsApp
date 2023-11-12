@@ -12,8 +12,8 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -68,10 +68,10 @@ class RegisterFragment : Fragment() {
             val userData = UserDataClass(nameInput, lastName1, lastName2, numberPhone, email)
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnSuccessListener {
-                    val profileUpdates = userProfileChangeRequest {
+                    val profileUpdates = UserProfileChangeRequest.Builder().apply {
                         displayName = "$nameInput $lastName1 $lastName2".trim()
                     }
-                    it.user?.updateProfile(profileUpdates)
+                    it.user?.updateProfile(profileUpdates.build())
                     firestore.collection("users").document(email).set(userData)
                         .addOnSuccessListener {
                             goToHome()
