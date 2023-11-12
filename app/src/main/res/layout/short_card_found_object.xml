@@ -8,15 +8,27 @@
     app:cardCornerRadius="20dp"
     android:elevation="20dp">
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:padding="2dp"
+        android:padding="7dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_found_object"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/see_details_found_object"
+            android:fontFamily="@font/tahoma2"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            />
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/title_found_object"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_found_object"
+            android:layout_marginBottom="5dp"
             android:fontFamily="@font/dubai_medium"
             android:textSize="15sp"
             />
@@ -35,19 +47,6 @@
             android:layout_margin="10dp"
             android:fontFamily="@font/dubai_medium"
             android:textSize="13sp"
-            />
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_found_object"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            app:layout_constraintTop_toBottomOf="@+id/location_found_object"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:text="@string/see_details_found_object"
-            android:fontFamily="@font/tahoma2"
-            android:textSize="12sp"
-            android:textAllCaps="false"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
