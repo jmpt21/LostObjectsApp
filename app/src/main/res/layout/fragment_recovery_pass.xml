@@ -95,6 +95,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/input_email_recovery"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:textSize="16sp"
                     android:text="@string/txt_button_send_reset_email"
                     android:fontFamily="@font/dubai_medium"
                     android:textStyle="bold"

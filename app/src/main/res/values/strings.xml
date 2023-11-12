@@ -80,6 +80,9 @@
     <string name="txt_title_image_report">Imagen: (opcional)</string>
     <string name="txt_image_report">*Se recomienda añadir una imagen para que las demás personas puedan identificar el objeto más fácilmente.</string>
     <string name="txt_description_button_image">Añadir imagen</string>
+    <string name="txt_button_send_report">Publicar objeto</string>
+    <string name="image_object">Imagen de objeto</string>
+    <string name="delete_image_report">Eliminar imagen</string>
 
 
 </resources>
