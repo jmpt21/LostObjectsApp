@@ -84,5 +84,24 @@
     <string name="image_object">Imagen de objeto</string>
     <string name="delete_image_report">Eliminar imagen</string>
 
+    <!-- Texts for short card lost object -->
+    <string name="title_lost_object">Perdí: %s</string>
+    <string name="description_lost_object">Descripción del objeto: %s</string>
+    <string name="see_report_lost_object">Ver reporte completo</string>
+
+    <!-- Texts for short card found object -->
+    <string name="location_found_object">Encontrado en: %s</string>
+    <string name="see_details_found_object">Ver detalles</string>
+
+    <!-- Texts for full card report object -->
+    <string name="date_full_report">Fecha: %s</string>
+    <string name="object_full_report">Objeto: %s</string>
+    <string name="description_full_report">Detalles: %s</string>
+    <string name="location_full_report">Ubicación: %s</string>
+    <string name="txt_contact_full_report">Contactar por:</string>
+    <string name="description_whatsapp_full_report">Whatsapp</string>
+    <string name="description_phone_full_report">Teléfono</string>
+    <string name="description_message_full_report">Mensaje de texto</string>
+    <string name="btn_back_full_report">Volver</string>
 
 </resources>
