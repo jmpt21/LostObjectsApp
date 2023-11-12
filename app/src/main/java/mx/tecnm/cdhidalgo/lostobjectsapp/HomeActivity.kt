@@ -66,6 +66,7 @@ class HomeActivity : AppCompatActivity() {
             R.id.action_sign_out -> {
                 val auth = Firebase.auth
                 auth.signOut()
+                userProfile = null
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
