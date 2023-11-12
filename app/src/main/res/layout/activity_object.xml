@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="10dp"
     app:cardCornerRadius="20dp"
-    android:elevation="20dp">
+    android:elevation="20dp"
+    tools:context=".ObjectActivity">
     <androidx.core.widget.NestedScrollView
         android:fillViewport="true"
         android:layout_width="match_parent"
@@ -19,7 +20,7 @@
                 android:id="@+id/btn_back_full_report"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/btn_back_full_report"
@@ -44,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:fontFamily="@font/dubai_medium"
-                    android:textSize="15sp"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     />
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -55,7 +56,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linear_layout_object"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/tahoma2"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:textAlignment="textEnd"
                 android:textStyle="bold"
                 />
@@ -66,7 +67,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/date_object"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/tahoma2"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 />
             <com.google.android.material.textview.MaterialTextView
@@ -76,7 +77,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/title_object"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/tahoma2"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 />
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/location_object"
@@ -85,7 +86,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/description_object"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/tahoma2"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textAlignment="textEnd"
                 />
             <com.google.android.material.imageview.ShapeableImageView
@@ -108,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:fontFamily="@font/dubai_medium"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textAlignment="center"
                     android:text="@string/txt_contact_full_report"
                     />

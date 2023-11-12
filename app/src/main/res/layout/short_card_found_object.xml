@@ -20,7 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/see_details_found_object"
             android:fontFamily="@font/tahoma2"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textAllCaps="false"
             />
         <com.google.android.material.textview.MaterialTextView
@@ -28,9 +28,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/btn_found_object"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/dubai_medium"
-            android:textSize="15sp"
+            android:textSize="18sp"
             />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/image_found_object"
@@ -46,7 +48,7 @@
             app:layout_constraintTop_toBottomOf="@+id/image_found_object"
             android:layout_margin="10dp"
             android:fontFamily="@font/dubai_medium"
-            android:textSize="13sp"
+            android:textSize="14sp"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
