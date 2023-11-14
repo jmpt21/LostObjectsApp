@@ -15,16 +15,15 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.ktx.storage
 import mx.tecnm.cdhidalgo.lostobjectsapp.HomeActivity
 import mx.tecnm.cdhidalgo.lostobjectsapp.R
+import mx.tecnm.cdhidalgo.lostobjectsapp.auth
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.FragmentReportBinding
 import mx.tecnm.cdhidalgo.lostobjectsapp.entities.ObjectDataClass
+import mx.tecnm.cdhidalgo.lostobjectsapp.storage
 import mx.tecnm.cdhidalgo.lostobjectsapp.userProfile
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -38,7 +37,6 @@ class ReportFragment : Fragment() {
     private var filePath: Uri? = null
 
     private lateinit var imageObject : ImageView
-    private lateinit var storage: FirebaseStorage
     private lateinit var firestore: FirebaseFirestore
     private val lostObjectsPath = "LostObjects/"
     private val foundObjectsPath = "FoundObjects/"
@@ -47,7 +45,6 @@ class ReportFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        storage = Firebase.storage
         firestore = Firebase.firestore
         _binding = FragmentReportBinding.inflate(inflater, container, false)
         return binding.root
@@ -58,7 +55,7 @@ class ReportFragment : Fragment() {
         imageObject = binding.imageReport
         val sdf = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
         val currentDate = sdf.format(Date())
-        binding.usernameReport.text = Firebase.auth.currentUser?.displayName
+        binding.usernameReport.text = auth.currentUser?.displayName
         binding.txtDateReport.text = currentDate
 
         binding.btnAddReport.setOnClickListener {
@@ -138,9 +135,9 @@ class ReportFragment : Fragment() {
                         .addOnSuccessListener {
                             val data = ObjectDataClass(
                                 null,
-                                Firebase.auth.currentUser?.email,
-                                Firebase.auth.currentUser?.displayName,
-                                userProfile?.phoneNumber  ?: Firebase.auth.currentUser?.phoneNumber,
+                                auth.currentUser?.email,
+                                auth.currentUser?.displayName,
+                                userProfile?.phoneNumber  ?: auth.currentUser?.phoneNumber,
                                 binding.txtObjectReport.text.toString(),
                                 binding.textDescriptionReport.text.toString(),
                                 binding.txtLocationReport.text.toString(),
@@ -156,9 +153,9 @@ class ReportFragment : Fragment() {
                 } else {
                     val data = ObjectDataClass(
                         null,
-                        Firebase.auth.currentUser?.email,
-                        Firebase.auth.currentUser?.displayName,
-                        userProfile?.phoneNumber ?: Firebase.auth.currentUser?.phoneNumber,
+                        auth.currentUser?.email,
+                        auth.currentUser?.displayName,
+                        userProfile?.phoneNumber ?: auth.currentUser?.phoneNumber,
                         binding.txtObjectReport.text.toString(),
                         binding.textDescriptionReport.text.toString(),
                         binding.txtLocationReport.text.toString(),
@@ -177,9 +174,9 @@ class ReportFragment : Fragment() {
                         .addOnSuccessListener {
                             val data = ObjectDataClass(
                                 null,
-                                Firebase.auth.currentUser?.email,
-                                Firebase.auth.currentUser?.displayName,
-                                userProfile?.phoneNumber ?: Firebase.auth.currentUser?.phoneNumber,
+                                auth.currentUser?.email,
+                                auth.currentUser?.displayName,
+                                userProfile?.phoneNumber ?: auth.currentUser?.phoneNumber,
                                 binding.txtObjectReport.text.toString(),
                                 binding.textDescriptionReport.text.toString(),
                                 binding.txtLocationReport.text.toString(),
@@ -195,9 +192,9 @@ class ReportFragment : Fragment() {
                 } else {
                     val data = ObjectDataClass(
                         null,
-                        Firebase.auth.currentUser?.email,
-                        Firebase.auth.currentUser?.displayName,
-                        userProfile?.phoneNumber ?: Firebase.auth.currentUser?.phoneNumber,
+                        auth.currentUser?.email,
+                        auth.currentUser?.displayName,
+                        userProfile?.phoneNumber ?: auth.currentUser?.phoneNumber,
                         binding.txtObjectReport.text.toString(),
                         binding.textDescriptionReport.text.toString(),
                         binding.txtLocationReport.text.toString(),

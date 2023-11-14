@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
@@ -13,6 +14,7 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import mx.tecnm.cdhidalgo.lostobjectsapp.ObjectActivity
+import mx.tecnm.cdhidalgo.lostobjectsapp.R
 import mx.tecnm.cdhidalgo.lostobjectsapp.adapters.ShortFoundObjectAdapter
 import mx.tecnm.cdhidalgo.lostobjectsapp.adapters.ShortLostObjectAdapter
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.FragmentHomeBinding
@@ -66,6 +68,14 @@ class HomeFragment : Fragment() {
                 recyclerViewLostObjects.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
                 recyclerViewLostObjects.adapter = lostObjectsAdapter
             }
+
+        binding.seeAllFoundObjects.setOnClickListener {
+            findNavController().navigate(R.id.action_HomeFragment_to_FoundObjectsFragment)
+        }
+
+        binding.seeAllLostObjects.setOnClickListener {
+            findNavController().navigate(R.id.action_HomeFragment_to_LostObjectsFragment)
+        }
     }
 
     override fun onDestroy() {

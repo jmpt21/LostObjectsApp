@@ -104,4 +104,12 @@
     <string name="description_message_full_report">Mensaje de texto</string>
     <string name="btn_back_full_report">Volver</string>
 
+    <!-- Texts for general reports -->
+    <string name="text_all_found_objects">Todos los objetos perdidos</string>
+    <string name="text_all_lost_objects">Todos los objetos encontrados</string>
+    <string name="reload">Recargar</string>
+    <string name="recent_lost_objects">Objetos perdidos recientemente</string>
+    <string name="recent_found_objects">Objetos encontrados recientemente</string>
+    <string name="see_all">Ver todos</string>
+
 </resources>

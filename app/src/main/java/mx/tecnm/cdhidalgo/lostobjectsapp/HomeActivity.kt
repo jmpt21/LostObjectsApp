@@ -17,7 +17,6 @@ import com.google.firebase.ktx.Firebase
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.ActivityHomeBinding
 import mx.tecnm.cdhidalgo.lostobjectsapp.entities.UserDataClass
 
-var userProfile: UserDataClass? = null
 class HomeActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityHomeBinding

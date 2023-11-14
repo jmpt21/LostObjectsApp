@@ -1,11 +1,7 @@
 package mx.tecnm.cdhidalgo.lostobjectsapp
 
-import android.content.ActivityNotFoundException
-import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.widget.AppCompatImageButton
 import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
@@ -61,30 +57,22 @@ class ObjectActivity : AppCompatActivity() {
                 Glide.with(this).load(it).into(imageObject)
             }
         } else {
-            imageObject.setImageResource(R.drawable.default_object)
+            //imageObject.setImageResource(R.drawable.default_object)
+            imageObject.setImageDrawable(null)
         }
 
         val phoneNumber = objectData.phoneNumber
+        val message = "Hola, vi tu publicación en Lost Objects App sobre tu objeto \"${objectData.title}\" y tengo información al respecto."
         btnWhatsapp.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$phoneNumber")
-            try {
-                startActivity(intent)
-            } catch (e: ActivityNotFoundException) {
-                Toast.makeText(this, "WhatsApp no está instalado", Toast.LENGTH_SHORT).show()
-            }
+            goToWhatsApp(this, phoneNumber, message)
         }
 
         btnCall.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:$phoneNumber")
-            startActivity(intent)
+            goToCall(this, phoneNumber)
         }
 
         btnMessage.setOnClickListener {
-            val intent = Intent(Intent.ACTION_SENDTO)
-            intent.data = Uri.parse("smsto:$phoneNumber")
-            startActivity(intent)
+            goToMessage(this, phoneNumber, message)
         }
     }
 }
