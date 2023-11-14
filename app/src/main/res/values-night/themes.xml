@@ -9,6 +9,10 @@
         <item name="colorPrimary">@color/dark_primary</item>
         <item name="android:backgroundTint">@color/dark_primary</item>
         <item name="android:text">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="controlBackground">@color/dark_primary</item>
     </style>
 
     <style name="ThemeFAB" parent="Base.Theme.LostObjectsApp">
