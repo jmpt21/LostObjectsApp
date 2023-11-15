@@ -111,5 +111,7 @@
     <string name="recent_lost_objects">Objetos perdidos recientemente</string>
     <string name="recent_found_objects">Objetos encontrados recientemente</string>
     <string name="see_all">Ver todos</string>
+    <string name="description_profile">Perfil de usuario</string>
+    <string name="txt_button_edit_profile">Guardar cambios</string>
 
 </resources>

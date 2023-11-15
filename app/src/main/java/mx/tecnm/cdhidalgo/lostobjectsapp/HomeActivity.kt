@@ -25,9 +25,14 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         firestore = Firebase.firestore
-        firestore.collection("users").document(Firebase.auth.currentUser?.email.toString())
-            .get().addOnSuccessListener {
-                userProfile = it.toObject(UserDataClass::class.java)
+        firestore.collection("users").document(auth.currentUser?.email!!).get()
+            .addOnSuccessListener {
+                if (!it.exists()) {
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    userProfile = it.toObject(UserDataClass::class.java)
+                }
             }
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -41,6 +46,19 @@ class HomeActivity : AppCompatActivity() {
         fab.setOnClickListener {
             navController.navigate(R.id.action_HomeFragment_to_ReportFragment)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        firestore.collection("users").document(auth.currentUser?.email!!).get()
+            .addOnSuccessListener {
+                if (!it.exists()) {
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    userProfile = it.toObject(UserDataClass::class.java)
+                }
+            }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -60,7 +78,11 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_profile -> true
+            R.id.action_profile -> {
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
+                true
+            }
             R.id.action_my_reports -> true
             R.id.action_sign_out -> {
                 val auth = Firebase.auth
