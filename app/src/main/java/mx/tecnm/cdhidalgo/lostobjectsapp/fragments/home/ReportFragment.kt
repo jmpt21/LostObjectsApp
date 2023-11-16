@@ -19,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import mx.tecnm.cdhidalgo.lostobjectsapp.HomeActivity
+import mx.tecnm.cdhidalgo.lostobjectsapp.ProfileActivity
 import mx.tecnm.cdhidalgo.lostobjectsapp.R
 import mx.tecnm.cdhidalgo.lostobjectsapp.auth
 import mx.tecnm.cdhidalgo.lostobjectsapp.databinding.FragmentReportBinding
@@ -52,6 +53,13 @@ class ReportFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        firestore.collection("users").document(auth.currentUser?.email!!).get()
+            .addOnSuccessListener {
+                if (!it.exists()) {
+                    val intent = Intent(activity, ProfileActivity::class.java)
+                    startActivity(intent)
+                }
+            }
         imageObject = binding.imageReport
         val sdf = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
         val currentDate = sdf.format(Date())
@@ -59,6 +67,11 @@ class ReportFragment : Fragment() {
         binding.txtDateReport.text = currentDate
 
         binding.btnAddReport.setOnClickListener {
+            if (userProfile == null) {
+                val intent = Intent(activity, ProfileActivity::class.java)
+                startActivity(intent)
+                return@setOnClickListener
+            }
             val groupTypeReport = binding.radioGroupReport
             val selectedId = groupTypeReport.checkedRadioButtonId
             val radioValue = view.findViewById<RadioButton>(selectedId)?.text

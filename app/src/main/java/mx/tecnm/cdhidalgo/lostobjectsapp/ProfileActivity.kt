@@ -90,18 +90,7 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         btnBack.setOnClickListener {
-            if (userProfile == null) {
-                MaterialAlertDialogBuilder(this,
-                    com.google.android.material.R.style.AlertDialog_AppCompat)
-                    .setTitle("Información")
-                    .setMessage("Completa tu perfil para una mejor experiencia")
-                    .setPositiveButton("Aceptar") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .show()
-            } else {
-                finish()
-            }
+            finish()
         }
     }
 }

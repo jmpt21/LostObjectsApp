@@ -27,12 +27,7 @@ class HomeActivity : AppCompatActivity() {
         firestore = Firebase.firestore
         firestore.collection("users").document(auth.currentUser?.email!!).get()
             .addOnSuccessListener {
-                if (!it.exists()) {
-                    val intent = Intent(this, ProfileActivity::class.java)
-                    startActivity(intent)
-                } else {
-                    userProfile = it.toObject(UserDataClass::class.java)
-                }
+                if (it.exists()) userProfile = it.toObject(UserDataClass::class.java)
             }
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -46,19 +41,6 @@ class HomeActivity : AppCompatActivity() {
         fab.setOnClickListener {
             navController.navigate(R.id.action_HomeFragment_to_ReportFragment)
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        firestore.collection("users").document(auth.currentUser?.email!!).get()
-            .addOnSuccessListener {
-                if (!it.exists()) {
-                    val intent = Intent(this, ProfileActivity::class.java)
-                    startActivity(intent)
-                } else {
-                    userProfile = it.toObject(UserDataClass::class.java)
-                }
-            }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
