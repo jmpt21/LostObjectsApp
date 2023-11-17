@@ -78,6 +78,33 @@ class HomeFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        firestore.collection("FoundObjects").orderBy("date", Query.Direction.DESCENDING).limit(6).get()
+            .addOnSuccessListener {
+                listFoundObjects = it.toObjects(ObjectDataClass::class.java)
+                foundObjectsAdapter = ShortFoundObjectAdapter(listFoundObjects, requireActivity()) { item ->
+                    val intent = Intent(requireActivity(), ObjectActivity::class.java)
+                    intent.putExtra("object", item)
+                    startActivity(intent)
+                }
+                recyclerViewFoundObjects.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+                recyclerViewFoundObjects.adapter = foundObjectsAdapter
+            }
+
+        firestore.collection("LostObjects").orderBy("date", Query.Direction.DESCENDING).limit(6).get()
+            .addOnSuccessListener {
+                listLostObjects = it.toObjects(ObjectDataClass::class.java)
+                lostObjectsAdapter = ShortLostObjectAdapter(listLostObjects, requireActivity()) { item ->
+                    val intent = Intent(requireActivity(), ObjectActivity::class.java)
+                    intent.putExtra("object", item)
+                    startActivity(intent)
+                }
+                recyclerViewLostObjects.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
+                recyclerViewLostObjects.adapter = lostObjectsAdapter
+            }
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

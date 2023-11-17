@@ -114,4 +114,10 @@
     <string name="description_profile">Perfil de usuario</string>
     <string name="txt_button_edit_profile">Guardar cambios</string>
 
+    <!-- Texts for my reports -->
+    <string name="title_activity_my_reports">Mis reportes</string>
+    <string name="tab_text_1">Encontrados</string>
+    <string name="tab_text_2">Perdidos</string>
+    <string name="btn_delete_report">Marcar como devuelto</string>
+
 </resources>

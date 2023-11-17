@@ -20,6 +20,11 @@
         android:theme="@style/Theme.LostObjectsApp"
         tools:targetApi="31">
         <activity
+            android:name=".MyReportsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_my_reports"
+            android:theme="@style/Theme.LostObjectsApp.NoActionBar" />
+        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity

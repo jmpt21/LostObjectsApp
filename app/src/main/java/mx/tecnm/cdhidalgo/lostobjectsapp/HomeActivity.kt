@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -65,14 +66,27 @@ class HomeActivity : AppCompatActivity() {
                 startActivity(intent)
                 true
             }
-            R.id.action_my_reports -> true
+            R.id.action_my_reports -> {
+                val intent = Intent(this, MyReportsActivity::class.java)
+                startActivity(intent)
+                true
+            }
             R.id.action_sign_out -> {
                 val auth = Firebase.auth
-                auth.signOut()
-                userProfile = null
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+                MaterialAlertDialogBuilder(this, com.google.android.material.R.style.AlertDialog_AppCompat)
+                    .setTitle("Salir")
+                    .setMessage("¿Desear cerrar sesión?")
+                    .setNegativeButton("Cancelar") { dialog, _ ->
+                        dialog.cancel()
+                    }
+                    .setPositiveButton("Aceptar") { _, _ ->
+                        auth.signOut()
+                        userProfile = null
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                    .show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
