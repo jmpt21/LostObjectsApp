@@ -48,7 +48,7 @@
             android:fontFamily="@font/arial_rounded_mt_bold"
             android:textSize="18sp"
             android:textAlignment="center"
-            android:text="@string/txt_credentials_data"/>
+            android:text="@string/txt_general_data"/>
         <EditText
             android:id="@+id/txt_name_profile"
             android:layout_width="match_parent"
