@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "506654347126-ml7t335599l3shppf4fqjbv6df9nndt6.apps.googleusercontent.com",
+          "client_id": "506654347126-ht8rcacmata1sop82uvfn97m1v0q1tgs.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "mx.tecnm.cdhidalgo.lostobjectsapp",
-            "certificate_hash": "5039e870cfd9bcbd82f87609e4194dd323b1d9f0"
+            "certificate_hash": "c4f8b9bd048f1e7fec374c515a11d894fc43cac5"
           }
         },
         {
